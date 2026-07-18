@@ -1,0 +1,10 @@
+{
+  "_descrizione": "Esempio di raccolta dati lead. Inviare come JSON su stdin a: node scripts/lead-validate.js",
+  "nome": "Laura",
+  "cognome": "Ferrari",
+  "email": "laura.ferrari@esempio.it",
+  "telefono": "345 678 9012",
+  "interesse": "acquisto",
+  "budget_max": 500000,
+  "messaggio": "Cerco un appartamento o villa nella provincia di Bergamo, preferibilmente con giardino."
+}

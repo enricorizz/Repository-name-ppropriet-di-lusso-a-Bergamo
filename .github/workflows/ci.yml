@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Test e check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Verifica versione Node
+        run: node --version
+
+      - name: Test automatici (node:test)
+        run: npm test
+
+      - name: Check struttura e JSON
+        run: npm run check
+
+      - name: Smoke test
+        run: npm run smoke
