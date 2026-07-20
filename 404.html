@@ -33,19 +33,19 @@
       async function resolveHomePath() {
         const segments = window.location.pathname.split("/").filter(Boolean);
         const candidates = segments.length > 1 ? [`/${segments[0]}/index.html`, "/index.html"] : ["/index.html"];
-
-        for (const candidate of candidates) {
-          try {
-            const response = await fetch(candidate, { method: "HEAD", cache: "no-store" });
-            if (response.ok) {
-              return candidate;
-            }
-          } catch {
-            // Ignora errori temporanei e prova il candidato successivo.
+        const probes = candidates.map(async (candidate) => {
+          const response = await fetch(candidate, { method: "HEAD", cache: "no-store" });
+          if (!response.ok) {
+            throw new Error(`Percorso non valido: ${candidate}`);
           }
-        }
+          return candidate;
+        });
 
-        return candidates[0];
+        try {
+          return await Promise.any(probes);
+        } catch {
+          return candidates[0];
+        }
       }
 
       resolveHomePath().then((homePath) => {

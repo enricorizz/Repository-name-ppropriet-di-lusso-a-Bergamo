@@ -11,6 +11,23 @@ const OFFLINE_ASSETS = [
   "./icons/apple-touch-icon.png",
 ];
 
+function offlineTextResponse() {
+  return new Response(
+    "Questa pagina non è disponibile offline in questo momento. Verifica la connessione, ricarica il sito e riprova.",
+    {
+      status: 503,
+      statusText: "Offline",
+      headers: {
+        "Content-Type": "text/plain; charset=utf-8",
+      },
+    },
+  );
+}
+
+async function navigationFallbackResponse() {
+  return (await caches.match(FALLBACK_PAGE)) || offlineTextResponse();
+}
+
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(OFFLINE_ASSETS)));
   self.skipWaiting();
@@ -43,10 +60,7 @@ self.addEventListener("fetch", (event) => {
         const networkResponse = await fetch(event.request);
 
         if (isNavigationRequest && !networkResponse.ok) {
-          const fallbackResponse = await caches.match(FALLBACK_PAGE);
-          if (fallbackResponse) {
-            return fallbackResponse;
-          }
+          return navigationFallbackResponse();
         }
 
         if (networkResponse.ok && new URL(event.request.url).origin === self.location.origin) {
@@ -57,22 +71,10 @@ self.addEventListener("fetch", (event) => {
         return networkResponse;
       } catch {
         if (isNavigationRequest) {
-          const fallbackResponse = await caches.match(FALLBACK_PAGE);
-          if (fallbackResponse) {
-            return fallbackResponse;
-          }
+          return navigationFallbackResponse();
         }
 
-        return new Response(
-          "Questa pagina non è disponibile offline in questo momento. Verifica la connessione, ricarica il sito e riprova.",
-          {
-            status: 503,
-            statusText: "Offline",
-            headers: {
-              "Content-Type": "text/plain; charset=utf-8",
-            },
-          },
-        );
+        return offlineTextResponse();
       }
     })()
   );
