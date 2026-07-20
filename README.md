@@ -10,12 +10,11 @@ Esperienza digitale in italiano per la promozione di proprietà di lusso a Berga
 
 ## Avvio rapido
 
-Apri direttamente `/home/runner/work/Repository-name-ppropriet-di-lusso-a-Bergamo/Repository-name-ppropriet-di-lusso-a-Bergamo/index.html` in un browser moderno.
+Apri direttamente `index.html` in un browser moderno.
 
 Se preferisci un server locale:
 
 ```bash
-cd /home/runner/work/Repository-name-ppropriet-di-lusso-a-Bergamo/Repository-name-ppropriet-di-lusso-a-Bergamo
 python3 -m http.server 4173
 ```
 
