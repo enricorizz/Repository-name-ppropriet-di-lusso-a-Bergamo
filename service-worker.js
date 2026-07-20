@@ -50,13 +50,12 @@ self.addEventListener("fetch", (event) => {
             new Response(
               "Questa pagina non è disponibile offline in questo momento. Verifica la connessione, ricarica il sito e riprova.",
               {
-              status: 503,
-              statusText: "Offline",
-              headers: {
-                "Content-Type": "text/plain; charset=utf-8",
+                status: 503,
+                statusText: "Offline",
+                headers: {
+                  "Content-Type": "text/plain; charset=utf-8",
+                },
               },
-              },
-            },
             )
           );
         });
