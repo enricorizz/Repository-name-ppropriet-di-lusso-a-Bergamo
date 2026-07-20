@@ -36,7 +36,7 @@
         const probes = candidates.map(async (candidate) => {
           const response = await fetch(candidate, { method: "HEAD", cache: "no-store" });
           if (!response.ok) {
-            throw new Error(`Percorso non valido: ${candidate}`);
+            throw new Error();
           }
           return candidate;
         });
