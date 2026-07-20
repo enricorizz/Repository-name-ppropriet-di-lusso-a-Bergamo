@@ -62,15 +62,27 @@ function renderProperties(items) {
 }
 
 function recommend({ tipologia, budget, priorita }) {
-  const ceiling = budget === "9999999" ? Number.MAX_SAFE_INTEGER : Number(budget);
+  const filtered = properties
+    .filter((property) => {
+      const typeMatch = tipologia === "tutte" || property.type === tipologia;
+      const budgetMatch =
+        budget === "tutti" ||
+        (budget === "1500000" && property.price <= 1500000) ||
+        (budget === "2500000" && property.price <= 2500000) ||
+        (budget === "9999999" && property.price > 2500000);
 
-  const filtered = properties.filter((property) => {
-    const typeMatch = tipologia === "tutte" || property.type === tipologia;
-    const budgetMatch = budget === "tutti" || property.price <= ceiling || budget === "9999999";
-    const priorityMatch = property.priority === priorita;
+      return typeMatch && budgetMatch;
+    })
+    .sort((first, second) => {
+      const firstScore = Number(first.priority === priorita);
+      const secondScore = Number(second.priority === priorita);
 
-    return typeMatch && budgetMatch && priorityMatch;
-  });
+      if (firstScore !== secondScore) {
+        return secondScore - firstScore;
+      }
+
+      return first.price - second.price;
+    });
 
   if (filtered.length > 0) {
     const best = filtered[0];
