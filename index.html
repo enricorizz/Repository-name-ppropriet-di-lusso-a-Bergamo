@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta
       name="description"
-      content="Rizzetti Immobiliare Agent: esperienza in italiano per scoprire proprietà di lusso a Bergamo con interfaccia ottimizzata per iPhone."
+      content="Rizzetti Immobiliare Agent: esperienza premium in italiano per proprietà di lusso a Bergamo, con contatto diretto e supporto PWA ottimizzato per iPhone."
     />
     <meta name="theme-color" content="#101522" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Rizzetti Agent" />
     <title>Rizzetti Immobiliare Agent</title>
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./icons/icon-192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -21,32 +25,42 @@
           <span class="brand__eyebrow">Bergamo · Luxury Real Estate</span>
           <strong>Rizzetti Immobiliare Agent</strong>
         </div>
-        <a class="nav__cta" href="#consulenza">Richiedi consulenza</a>
+        <div class="nav__actions">
+          <a class="nav__cta" href="#consulenza">Richiedi consulenza</a>
+          <a class="nav__cta nav__cta--accent" href="https://wa.me/39335293550" target="_blank" rel="noreferrer">
+            WhatsApp
+          </a>
+        </div>
       </nav>
 
       <div class="hero__content container">
         <div class="hero__copy">
           <p class="kicker">Interamente in italiano</p>
-          <h1>Proprietà di lusso a Bergamo, presentate al meglio anche su iPhone.</h1>
+          <h1>Proprietà di lusso a Bergamo, con contatto diretto e resa eccellente anche su iPhone.</h1>
           <p class="hero__lead">
-            Una vetrina digitale elegante, veloce e orientata alla conversione per clienti interessati a residenze
-            esclusive, attici panoramici e ville di pregio.
+            Una vetrina digitale elegante, veloce e realmente utile: selezione guidata, contatti immediati, esperienza
+            installabile su Home Screen e presentazione premium delle proprietà.
           </p>
           <div class="hero__actions">
             <a class="button button--primary" href="#proprieta">Esplora le proprietà</a>
-            <a class="button button--secondary" href="#servizi">Scopri i servizi</a>
+            <a class="button button--secondary" href="#contatti">Contatti diretti</a>
           </div>
           <ul class="hero__stats" aria-label="Punti di forza">
-            <li><strong>100%</strong><span>Esperienza in italiano</span></li>
-            <li><strong>Mobile-first</strong><span>Ottimizzata per iPhone</span></li>
-            <li><strong>Premium</strong><span>Tono e stile luxury</span></li>
+            <li><strong>3 canali</strong><span>Telefono, email e WhatsApp</span></li>
+            <li><strong>PWA</strong><span>Installabile anche su iPhone</span></li>
+            <li><strong>Luxury</strong><span>Visual premium e taglio commerciale</span></li>
           </ul>
         </div>
 
         <aside class="hero-card" id="consulenza">
           <p class="hero-card__eyebrow">Selezione guidata</p>
-          <h2>Trova la soluzione più adatta in meno di un minuto</h2>
+          <h2>Ricevi subito una proposta iniziale e apri il contatto nel canale migliore</h2>
           <form id="advisor-form" class="advisor-form">
+            <label>
+              <span>Nome</span>
+              <input type="text" name="nome" placeholder="Come ti chiami?" autocomplete="name" />
+            </label>
+
             <label>
               <span>Tipologia</span>
               <select name="tipologia">
@@ -80,7 +94,13 @@
           </form>
 
           <div id="advisor-result" class="advisor-result" aria-live="polite">
-            Seleziona le tue preferenze per ricevere una proposta iniziale.
+            Seleziona le tue preferenze per ricevere una proposta iniziale e aprire subito WhatsApp o email.
+          </div>
+
+          <div class="quick-links">
+            <a class="quick-links__item" href="tel:+39035212562">Chiama ufficio</a>
+            <a class="quick-links__item" href="mailto:Info@Rizzetti.it">Invia email</a>
+            <a class="quick-links__item" href="https://www.rizzetti.it" target="_blank" rel="noreferrer">Visita il sito</a>
           </div>
         </aside>
       </div>
@@ -90,9 +110,36 @@
       <section class="section container" id="proprieta">
         <div class="section-heading">
           <p class="kicker">Proprietà in evidenza</p>
-          <h2>Una selezione curata per clienti che cercano esclusività reale.</h2>
+          <h2>Una selezione curata con visual placeholder premium per comunicare valore fin dal primo sguardo.</h2>
         </div>
         <div id="property-grid" class="property-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="section section--alt" id="ambienti">
+        <div class="container">
+          <div class="section-heading">
+            <p class="kicker">Atmosfera luxury</p>
+            <h2>Tre scenari visivi pensati per sostituire subito i placeholder con asset fotografici reali.</h2>
+          </div>
+
+          <div class="mood-grid">
+            <article class="mood-card mood-card--panorama">
+              <span class="mood-card__label">Vista</span>
+              <h3>Panorami su Città Alta</h3>
+              <p>Hero visual ideale per ville e attici con terrazze scenografiche e tramonti su Bergamo.</p>
+            </article>
+            <article class="mood-card mood-card--interior">
+              <span class="mood-card__label">Interior</span>
+              <h3>Interni contemporanei</h3>
+              <p>Placeholder raffinati per living, spa, cucine di design e ambienti a forte percezione premium.</p>
+            </article>
+            <article class="mood-card mood-card--garden">
+              <span class="mood-card__label">Privacy</span>
+              <h3>Giardini e parchi riservati</h3>
+              <p>Supporto visivo per proprietà di rappresentanza con parchi privati e accessi discreti.</p>
+            </article>
+          </div>
+        </div>
       </section>
 
       <section class="section section--alt" id="servizi">
@@ -119,13 +166,71 @@
         </div>
       </section>
 
+      <section class="section container" id="contatti">
+        <div class="section-heading">
+          <p class="kicker">Contatti diretti</p>
+          <h2>Tre canali immediati per convertire interesse in conversazione reale.</h2>
+        </div>
+
+        <div class="contacts-grid">
+          <article class="contact-card">
+            <span class="contact-card__eyebrow">Telefono ufficio</span>
+            <h3>035 21 25 62</h3>
+            <p>Canale rapido per richieste immediate, visite e prima qualificazione commerciale.</p>
+            <a class="button button--secondary" href="tel:+39035212562">Chiama ora</a>
+          </article>
+
+          <article class="contact-card">
+            <span class="contact-card__eyebrow">Email di riferimento</span>
+            <h3>Info@Rizzetti.it</h3>
+            <p>Ideale per inviare esigenze dettagliate, documentazione o richieste su immobili specifici.</p>
+            <a class="button button--secondary" href="mailto:Info@Rizzetti.it">Scrivi una email</a>
+          </article>
+
+          <article class="contact-card">
+            <span class="contact-card__eyebrow">WhatsApp Business</span>
+            <h3>335 29 35 50</h3>
+            <p>Il canale più veloce per aprire una conversazione mobile-first direttamente da iPhone.</p>
+            <a class="button button--primary" href="https://wa.me/39335293550" target="_blank" rel="noreferrer">
+              Apri WhatsApp
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="pwa">
+        <div class="container">
+          <div class="install-panel">
+            <div>
+              <p class="kicker">Pronta per Home Screen</p>
+              <h2>Il sito ora è configurato come PWA per un’esperienza più fluida e rapida da riaprire.</h2>
+              <p>
+                Su iPhone: apri Safari, tocca Condividi e poi “Aggiungi a Home”. Su altri dispositivi puoi installare
+                l’app web dal browser compatibile.
+              </p>
+            </div>
+            <ul class="install-panel__list">
+              <li>manifest web dedicato</li>
+              <li>service worker per cache essenziale</li>
+              <li>icone dedicate per Home Screen</li>
+              <li>layout con safe area e CTA mobili</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <section class="section container">
         <div class="cta-panel">
           <div>
-            <p class="kicker">Pronto per la versione successiva</p>
-            <h2>Base pronta per essere collegata a CRM, WhatsApp Business o richieste reali.</h2>
+            <p class="kicker">Operatività immediata</p>
+            <h2>Base pronta per essere collegata a CRM, richieste reali e flussi di contatto commerciali.</h2>
           </div>
-          <a class="button button--primary" href="#consulenza">Inizia da qui</a>
+          <div class="cta-panel__actions">
+            <a class="button button--primary" href="https://wa.me/39335293550" target="_blank" rel="noreferrer">
+              Avvia contatto su WhatsApp
+            </a>
+            <a class="button button--secondary" href="mailto:Enrico@Rizzetti.it">Contatta Enrico</a>
+          </div>
         </div>
       </section>
     </main>
@@ -134,11 +239,17 @@
       <div class="container footer__content">
         <div>
           <strong>Rizzetti Immobiliare Agent</strong>
-          <p>Vetrina immobiliare di lusso in italiano, con esperienza mobile-first.</p>
+          <p>www.Rizzetti.it · Info@Rizzetti.it · esperienza premium in italiano, mobile-first e installabile.</p>
         </div>
         <a href="#top" class="footer__link">Torna su</a>
       </div>
     </footer>
+
+    <div class="mobile-bar" aria-label="Azioni rapide mobili">
+      <a href="tel:+39035212562">Chiama</a>
+      <a href="mailto:Info@Rizzetti.it">Email</a>
+      <a href="https://wa.me/39335293550" target="_blank" rel="noreferrer">WhatsApp</a>
+    </div>
 
     <script src="./script.js"></script>
   </body>
