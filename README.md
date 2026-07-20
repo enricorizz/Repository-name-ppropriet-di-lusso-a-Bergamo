@@ -10,8 +10,8 @@ Kit di configurazione per l'assistente virtuale di **Rizzetti Immobiliare**, bas
 |---|---|
 | 🌐 Sito | [www.Rizzetti.it](https://www.rizzetti.it) |
 | 📧 Email | [Info@Rizzetti.it](mailto:Info@Rizzetti.it) |
-| 📞 Telefono | [035 21 25 62](tel:+390352125 62) |
-| 💬 WhatsApp | [335 29 35 50](https://wa.me/393352935 50) |
+| 📞 Telefono | [035 21 25 62](tel:+39035212562) |
+| 💬 WhatsApp | [335 29 35 50](https://wa.me/3935293550) |
 
 > **Stato:** Demo / Configurazione di riferimento — il catalogo proprietà è fittizio a scopo dimostrativo. Prima del go-live sostituire con dati reali.  
 > **Identità e contatti agente:** già configurati con i dati reali di Rizzetti Immobiliare.
