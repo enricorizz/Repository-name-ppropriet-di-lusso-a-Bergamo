@@ -5,6 +5,8 @@ const contacts = {
   officePhone: "+39035212562",
   whatsapp: "+39335293550",
 };
+const HIGH_END_BUDGET = "oltre2500000";
+const DEFAULT_WHATSAPP_MESSAGE = "Buongiorno, desidero maggiori informazioni sulle proprietà di lusso a Bergamo.";
 
 const properties = [
   {
@@ -49,7 +51,7 @@ const grid = document.querySelector("#property-grid");
 const form = document.querySelector("#advisor-form");
 const result = document.querySelector("#advisor-result");
 
-function euro(amount) {
+function formatEuro(amount) {
   return new Intl.NumberFormat("it-IT", {
     style: "currency",
     currency: "EUR",
@@ -79,7 +81,7 @@ function buildInquiryMessage(property, preferences, customerName) {
   const namePrefix = customerName ? `Sono ${customerName}. ` : "";
 
   return (
-    `${namePrefix}Mi interessa ${property.title} a ${euro(property.price)}.` +
+    `${namePrefix}Mi interessa ${property.title} a ${formatEuro(property.price)}.` +
     ` Preferenze: tipologia ${preferences.tipologia}, budget ${preferences.budgetLabel}, priorità ${preferences.priorityLabel}.`
   );
 }
@@ -119,7 +121,7 @@ function renderProperties(items, preferences) {
           <div class="property-card__meta">
             ${property.details.map((detail) => `<span>${detail}</span>`).join("")}
           </div>
-          <div class="property-card__price">${euro(property.price)}</div>
+          <div class="property-card__price">${formatEuro(property.price)}</div>
           <div class="property-card__actions">
             <a class="button button--secondary" href="${emailLink}">Richiedi dettagli</a>
             <a class="button button--primary" href="${whatsappLink}" target="_blank" rel="noreferrer">WhatsApp</a>
@@ -146,7 +148,7 @@ function renderRecommendation(property, preferences, customerName) {
   result.innerHTML = `
     <div>
       <strong>${safeName}consiglio iniziale:</strong>
-      ${escapeHtml(property.title)} — ${escapeHtml(property.label)}, a partire da ${escapeHtml(euro(property.price))}.
+      ${escapeHtml(property.title)} — ${escapeHtml(property.label)}, a partire da ${escapeHtml(formatEuro(property.price))}.
     </div>
     <div>Apri subito il contatto nel canale che preferisci con un messaggio già precompilato.</div>
     <div class="advisor-result__actions">
@@ -172,7 +174,7 @@ function recommend({ tipologia, budget, priorita, nome }) {
         tutti: "qualsiasi budget",
         1500000: "fino a €1,5M",
         2500000: "fino a €2,5M",
-        9999999: "oltre €2,5M",
+        oltre2500000: "oltre €2,5M",
       }[budget] ?? "qualsiasi budget",
   };
 
@@ -183,7 +185,7 @@ function recommend({ tipologia, budget, priorita, nome }) {
         budget === "tutti" ||
         (budget === "1500000" && property.price <= 1500000) ||
         (budget === "2500000" && property.price <= 2500000) ||
-        (budget === "9999999" && property.price > 2500000);
+        (budget === HIGH_END_BUDGET && property.price > 2500000);
 
       return typeMatch && budgetMatch;
     })
@@ -222,7 +224,7 @@ function registerServiceWorker() {
 
 function hydrateWhatsappLinks() {
   document.querySelectorAll("[data-whatsapp-link]").forEach((link) => {
-    link.href = whatsappHref("Buongiorno, desidero maggiori informazioni sulle proprietà di lusso a Bergamo.");
+    link.href = whatsappHref(DEFAULT_WHATSAPP_MESSAGE);
     link.target = "_blank";
   });
 }
