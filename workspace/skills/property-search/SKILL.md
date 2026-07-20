@@ -1,6 +1,6 @@
 ---
 name: property-search
-description: "Cerca proprietà immobiliari nel catalogo demo della provincia di Bergamo."
+description: "Cerca proprietà immobiliari nel catalogo di Rizzetti Immobiliare nella provincia di Bergamo."
 metadata:
   {
     "openclaw":
@@ -11,9 +11,9 @@ metadata:
   }
 ---
 
-# Property Search — Ricerca Proprietà Demo
+# Property Search — Ricerca Proprietà Rizzetti Immobiliare
 
-Ricerca nel catalogo dimostrativo di proprietà nella provincia di Bergamo.
+Ricerca nel catalogo proprietà Rizzetti Immobiliare per la provincia di Bergamo.
 
 ## Quando usare questa skill
 
@@ -23,10 +23,6 @@ Usa questa skill quando l'utente:
 - chiede: "Cosa avete a Bergamo?", "Mostrami ville con piscina", "Appartamenti sotto 300.000 euro"
 
 ## Avvio ricerca
-
-```bash
-node scripts/property-search.js [filtri]
-```
 
 ### Filtri disponibili
 
@@ -57,12 +53,11 @@ node scripts/property-search.js [filtri]
 
 1. Mostra i risultati in formato leggibile (titolo, comune/zona, prezzo, camere, tipologia)
 2. Includi sempre la `nota_verifica` di ogni record
-3. Aggiungi sempre: "**Ricorda: tutti i dati sono dimostrativi. Prezzi e disponibilità vanno verificati con un operatore.**"
-4. Se `count === 0`: "Non ho trovato proprietà con questi criteri nel catalogo demo. Prova ad allargare la ricerca."
+3. Aggiungi sempre: "**Prezzi e disponibilità vanno verificati con un operatore Rizzetti Immobiliare (Info@Rizzetti.it | 035 21 25 62).**"
+4. Se `count === 0`: "Non ho trovato proprietà con questi criteri. Prova ad allargare la ricerca o contatta direttamente l'agenzia."
 5. Proponi la skill `visit-request` per le proprietà di interesse
 
 ## Limiti
 
-- Catalogo fisso (`data/properties.demo.json`) — non interroga MLS, portali o sistemi esterni
-- Prezzi non riflettono il mercato reale
-- Disponibilità non verificata
+- Catalogo locale (`data/properties.demo.json`) — non interroga MLS, portali o sistemi esterni in tempo reale
+- Disponibilità non verificata in tempo reale

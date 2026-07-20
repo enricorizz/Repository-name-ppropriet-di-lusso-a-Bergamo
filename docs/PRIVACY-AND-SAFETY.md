@@ -55,4 +55,4 @@ L'agente è configurato (`workspace/SOUL.md`, `workspace/AGENTS.md`) per:
 
 ## Segnalazione di problemi di sicurezza
 
-Se identifichi potenziali vulnerabilità o rischi per la privacy in questo workspace, apri una issue riservata nel repository o contatta il maintainer direttamente.
+Se identifichi potenziali vulnerabilità o rischi per la privacy in questo workspace, apri una issue riservata nel repository o contatta direttamente Rizzetti Immobiliare su **Info@Rizzetti.it** oppure al **035 21 25 62**.

@@ -1,21 +1,31 @@
 # Rizzetti Immobiliare — Workspace OpenClaw
 
-Kit di configurazione per un assistente virtuale immobiliare basato su [OpenClaw](https://github.com/openclaw/openclaw), pensato per la provincia di Bergamo.
+Kit di configurazione per l'assistente virtuale di **Rizzetti Immobiliare**, basato su [OpenClaw](https://github.com/openclaw/openclaw), operante nella provincia di Bergamo.
 
-> **Stato:** Demo / Configurazione di riferimento  
-> **Dati proprietà:** Fittizi, a scopo dimostrativo  
-> **Nome consigliato per il repository:** `rizzetti-immobiliare-openclaw`
+---
+
+## Rizzetti Immobiliare
+
+| | |
+|---|---|
+| 🌐 Sito | [www.Rizzetti.it](https://www.rizzetti.it) |
+| 📧 Email | [Info@Rizzetti.it](mailto:Info@Rizzetti.it) |
+| 📞 Telefono | [035 21 25 62](tel:+390352125 62) |
+| 💬 WhatsApp | [335 29 35 50](https://wa.me/393352935 50) |
+
+> **Stato:** Demo / Configurazione di riferimento — il catalogo proprietà è fittizio a scopo dimostrativo. Prima del go-live sostituire con dati reali.  
+> **Identità e contatti agente:** già configurati con i dati reali di Rizzetti Immobiliare.
 
 ---
 
 ## Cos'è questo progetto
 
-Un workspace e configuration kit per OpenClaw che permette di avviare un assistente virtuale capace di:
+Un workspace e configuration kit per OpenClaw che permette di avviare l'assistente virtuale di Rizzetti Immobiliare, capace di:
 
-- cercare nel catalogo demo di proprietà (Bergamo e provincia);
+- cercare nel catalogo di proprietà (Bergamo e provincia);
 - raccogliere le preferenze di acquisto/affitto di un utente;
 - ricevere e validare richieste di visita (senza confermare appuntamenti in autonomia);
-- comunicare in italiano professionale, distinguendo chiaramente cosa è dimostrativo e cosa richiede un operatore umano.
+- comunicare in italiano professionale, rimandando all'agenzia per qualsiasi conferma o consulenza.
 
 **Cosa NON fa questo kit:**  
 Non include backend, CRM reale, integrazioni di calendario, provider IA, canali di messaggistica o credenziali. Tutto ciò va configurato tramite l'onboarding ufficiale di OpenClaw.

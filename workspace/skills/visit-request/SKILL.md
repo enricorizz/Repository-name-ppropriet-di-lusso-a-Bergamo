@@ -50,7 +50,7 @@ Se `valid: false`, mostra gli errori e chiedi all'utente di correggere.
 
 Dopo una validazione positiva, comunica **sempre**:
 
-"Ho registrato la tua richiesta di visita per [titolo proprietà] il [data]. **Questa non è una conferma definitiva.** Un operatore verificherà la disponibilità e ti contatterà all'email [email] per confermare l'appuntamento."
+"Ho registrato la tua richiesta di visita per [titolo proprietà] il [data]. **Questa non è una conferma definitiva.** Un operatore di Rizzetti Immobiliare verificherà la disponibilità e ti contatterà all'email [email] per confermare l'appuntamento. Per urgenze puoi chiamare il 035 21 25 62 o scrivere su WhatsApp al 335 29 35 50."
 
 ## Limiti
 

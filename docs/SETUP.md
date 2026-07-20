@@ -107,9 +107,11 @@ Tutti i test devono passare prima di procedere.
 ## Passi manuali rimanenti
 
 1. Configura almeno un provider IA tramite `openclaw onboard`
-2. (Opzionale) Configura canali di messaggistica
-3. Sostituisci `data/properties.demo.json` con il catalogo reale prima del go-live
+2. (Opzionale) Configura canali di messaggistica (Telegram, WhatsApp, ecc.)
+3. Sostituisci `data/properties.demo.json` con il catalogo reale delle proprietà Rizzetti Immobiliare prima del go-live
 4. Verifica la checklist in `docs/DEPLOYMENT-CHECKLIST.md`
+
+Per supporto: **Info@Rizzetti.it** | Tel. **035 21 25 62** | WhatsApp **335 29 35 50**
 
 ## Note per Windows
 

@@ -137,3 +137,9 @@ journalctl --user -u openclaw -f
 
 Per problemi specifici di OpenClaw: https://github.com/openclaw/openclaw/issues  
 Per problemi di questo workspace: apri una issue nel repository corrente.
+
+Per assistenza diretta con Rizzetti Immobiliare:
+- **Email:** Info@Rizzetti.it
+- **Telefono:** 035 21 25 62
+- **WhatsApp:** 335 29 35 50
+- **Sito:** [www.Rizzetti.it](https://www.rizzetti.it)
