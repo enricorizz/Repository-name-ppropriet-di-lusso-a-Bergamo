@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://github.com/enricorizz/Repository-name-ppropriet-di-lusso-a-Bergamo/data/property.schema.json",
+  "$id": "https://github.com/enricorizz/rizzetti-immobiliare-openclaw/data/property.schema.json",
   "title": "Proprietà Immobiliare — Schema Demo",
   "description": "Schema documentale per le proprietà nel catalogo demo di Rizzetti Immobiliare. I dati reali devono rispettare questo schema.",
   "type": "object",
