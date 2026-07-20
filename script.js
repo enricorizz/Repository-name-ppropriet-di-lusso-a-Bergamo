@@ -1,7 +1,7 @@
 const contacts = {
   website: "https://www.rizzetti.it",
-  officeEmail: "Info@Rizzetti.it",
-  ownerEmail: "Enrico@Rizzetti.it",
+  officeEmail: "info@rizzetti.it",
+  ownerEmail: "enrico@rizzetti.it",
   officePhone: "+39035212562",
   whatsapp: "39335293550",
 };
