@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>Rizzetti Immobiliare — Proprietà di Lusso a Bergamo</title>
+    <meta name="description" content="Agenzia immobiliare specializzata in proprietà di lusso a Bergamo. Ville, attici, dimore storiche. Contattaci per una consulenza esclusiva." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- HERO -->
+    <header class="hero">
+      <div class="hero-content">
+        <p class="hero-tag">Bergamo · Proprietà Esclusive</p>
+        <h1>Rizzetti<br />Immobiliare</h1>
+        <p class="hero-subtitle">Il tuo partner di fiducia per le proprietà di lusso a Bergamo</p>
+        <a href="#proprieta" class="btn btn-primary">Scopri le proprietà</a>
+      </div>
+    </header>
+
+    <!-- PROPRIETÀ -->
+    <section id="proprieta" class="section">
+      <div class="container">
+        <h2 class="section-title">Selezione Esclusiva</h2>
+        <p class="section-subtitle">Proprietà selezionate a mano per i nostri clienti più esigenti</p>
+        <div id="property-grid" class="property-grid"></div>
+      </div>
+    </section>
+
+    <!-- RACCOMANDAZIONE -->
+    <section id="raccomandazione" class="section section-dark">
+      <div class="container">
+        <h2 class="section-title">Trova la tua proprietà ideale</h2>
+        <p class="section-subtitle">Rispondi a tre domande e ti presentiamo le soluzioni più adatte a te</p>
+        <form id="recommend-form" class="recommend-form">
+          <div class="form-group">
+            <label for="tipologia">Tipologia</label>
+            <select id="tipologia" name="tipologia">
+              <option value="tutte">Tutte le tipologie</option>
+              <option value="villa">Villa</option>
+              <option value="attico">Attico</option>
+              <option value="dimora">Dimora storica</option>
+              <option value="appartamento">Appartamento di lusso</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="budget">Budget massimo</label>
+            <select id="budget" name="budget">
+              <option value="tutti">Nessun limite</option>
+              <option value="1500000">Fino a 1.500.000 €</option>
+              <option value="2500000">Fino a 2.500.000 €</option>
+              <option value="9999999">Oltre 2.500.000 €</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="priorita">Priorità principale</label>
+            <select id="priorita" name="priorita">
+              <option value="vista">Vista panoramica</option>
+              <option value="posizione">Posizione centrale</option>
+              <option value="privacy">Privacy e riservatezza</option>
+              <option value="spazio">Spazio e giardino</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Mostra risultati</button>
+        </form>
+        <div id="recommend-results" class="recommend-results" hidden></div>
+      </div>
+    </section>
+
+    <!-- CONTATTI -->
+    <section id="contatti" class="section">
+      <div class="container">
+        <h2 class="section-title">Contattaci</h2>
+        <p class="section-subtitle">Il nostro team è disponibile per una consulenza personalizzata</p>
+        <div id="contact-list" class="contact-list"></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© 2024 Rizzetti Immobiliare · <a href="https://www.Rizzetti.it">www.Rizzetti.it</a></p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

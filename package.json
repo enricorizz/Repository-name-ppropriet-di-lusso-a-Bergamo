@@ -1,0 +1,13 @@
+{
+  "name": "rizzetti-immobiliare-agent",
+  "version": "2.0.0",
+  "description": "Agente IA per vendita proprietà di lusso a Bergamo - Rizzetti Immobiliare",
+  "scripts": {
+    "test": "node --check script.js && echo \"✓ script.js OK\"",
+    "start": "python3 -m http.server 4173"
+  },
+  "keywords": ["immobiliare", "bergamo", "lusso", "real-estate"],
+  "author": "Rizzetti Immobiliare",
+  "license": "MIT",
+  "private": true
+}
