@@ -1,0 +1,39 @@
+# Dipendenze
+node_modules/
+.pnpm-store/
+.yarn/
+
+# Ambienti virtuali Python (se usati per tool ausiliari)
+.venv/
+__pycache__/
+
+# Segreti e configurazione locale — NON committare mai
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+*.p12
+*.secret
+
+# Build e output
+dist/
+build/
+coverage/
+*.log
+npm-debug.log*
+
+# Editor e OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/settings.json
+*.swp
+*.swo
+
+# Workspace locale OpenClaw (non versionare la copia live)
+.openclaw/
+
+# File temporanei
+tmp/
+temp/

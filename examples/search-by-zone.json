@@ -1,0 +1,5 @@
+{
+  "_descrizione": "Esempio di ricerca per zona/comune. Usare con: node scripts/property-search.js --comune Bergamo --zona Alta",
+  "comune": "Bergamo",
+  "zona": "Alta"
+}

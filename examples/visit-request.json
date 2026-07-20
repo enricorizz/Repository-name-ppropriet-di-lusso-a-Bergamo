@@ -1,0 +1,11 @@
+{
+  "_descrizione": "Esempio di richiesta di visita. Inviare come JSON su stdin a: node scripts/visit-request.js",
+  "_nota": "La data_preferita deve essere nel futuro. Adattarla prima dell'uso.",
+  "property_id": "BG-2026-001",
+  "nome": "Mario Rossi",
+  "email": "mario.rossi@esempio.it",
+  "telefono": "333 123 4567",
+  "data_preferita": "2026-09-15",
+  "fascia_oraria": "mattina",
+  "note": "Sono interessato principalmente agli spazi esterni e alla vista."
+}

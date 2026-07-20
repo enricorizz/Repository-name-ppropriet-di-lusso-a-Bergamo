@@ -1,0 +1,19 @@
+{
+  "name": "rizzetti-immobiliare-openclaw",
+  "version": "1.0.0",
+  "description": "Workspace OpenClaw per assistente virtuale immobiliare — Rizzetti Immobiliare, Bergamo. Dati demo.",
+  "private": true,
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "check": "bash scripts/check.sh",
+    "smoke": "bash scripts/smoke-test.sh",
+    "search": "node scripts/property-search.js",
+    "lead": "node scripts/lead-validate.js",
+    "visit": "node scripts/visit-request.js"
+  },
+  "keywords": ["openclaw", "immobiliare", "bergamo", "workspace", "demo"],
+  "license": "SEE LICENSE IN README.md"
+}

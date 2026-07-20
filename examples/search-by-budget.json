@@ -1,0 +1,4 @@
+{
+  "_descrizione": "Esempio di ricerca per budget massimo. Usare con: node scripts/property-search.js --budget-max 300000",
+  "budget_max": 300000
+}

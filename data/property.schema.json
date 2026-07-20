@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/enricorizz/rizzetti-immobiliare-openclaw/data/property.schema.json",
+  "title": "Proprietà Immobiliare — Schema Demo",
+  "description": "Schema documentale per le proprietà nel catalogo demo di Rizzetti Immobiliare. I dati reali devono rispettare questo schema.",
+  "type": "object",
+  "required": ["id", "titolo", "comune", "zona", "tipologia", "prezzo", "valuta", "superficie_mq", "camere", "bagni", "caratteristiche", "stato", "stato_demo", "nota_verifica"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Identificatore univoco nel formato BG-YYYY-NNN",
+      "pattern": "^BG-\\d{4}-\\d{3}$"
+    },
+    "titolo": {
+      "type": "string",
+      "description": "Titolo descrittivo della proprietà",
+      "minLength": 5,
+      "maxLength": 120
+    },
+    "comune": {
+      "type": "string",
+      "description": "Comune in cui si trova la proprietà"
+    },
+    "zona": {
+      "type": "string",
+      "description": "Zona o quartiere specifico"
+    },
+    "tipologia": {
+      "type": "string",
+      "description": "Tipo di immobile",
+      "enum": ["appartamento", "villa", "attico", "loft", "casale", "ufficio", "negozio", "altro"]
+    },
+    "prezzo": {
+      "type": "number",
+      "description": "Prezzo in unità della valuta indicata",
+      "minimum": 0
+    },
+    "valuta": {
+      "type": "string",
+      "description": "Valuta del prezzo",
+      "enum": ["EUR"]
+    },
+    "superficie_mq": {
+      "type": "number",
+      "description": "Superficie in metri quadri",
+      "minimum": 1
+    },
+    "camere": {
+      "type": "integer",
+      "description": "Numero di camere da letto",
+      "minimum": 0
+    },
+    "bagni": {
+      "type": "integer",
+      "description": "Numero di bagni",
+      "minimum": 1
+    },
+    "piano": {
+      "type": "integer",
+      "description": "Piano dell'immobile (0 = terra)"
+    },
+    "caratteristiche": {
+      "type": "array",
+      "description": "Lista di caratteristiche dell'immobile",
+      "items": { "type": "string" },
+      "minItems": 0
+    },
+    "stato": {
+      "type": "string",
+      "description": "Stato conservativo dell'immobile"
+    },
+    "stato_demo": {
+      "type": "boolean",
+      "description": "true = dato dimostrativo fittizio, false = dato reale verificato"
+    },
+    "nota_verifica": {
+      "type": "string",
+      "description": "Nota obbligatoria sulla necessità di verifica con operatore"
+    }
+  }
+}
