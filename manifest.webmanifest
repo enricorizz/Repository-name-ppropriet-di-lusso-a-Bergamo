@@ -1,0 +1,29 @@
+{
+  "name": "Rizzetti Immobiliare Agent",
+  "short_name": "Rizzetti Agent",
+  "description": "Esperienza premium in italiano per proprietà di lusso a Bergamo.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0d111b",
+  "theme_color": "#101522",
+  "lang": "it-IT",
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

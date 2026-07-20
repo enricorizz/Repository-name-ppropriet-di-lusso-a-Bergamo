@@ -1,0 +1,12 @@
+{
+  "name": "rizzetti-immobiliare-agent",
+  "version": "1.0.0",
+  "description": "Esperienza digitale in italiano per proprietà di lusso a Bergamo",
+  "scripts": {
+    "test": "echo \"Nessun test configurato\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "private": true
+}

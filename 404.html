@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reindirizzamento in corso</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+        background: #0d111b;
+        color: #f5f7fb;
+        text-align: center;
+      }
+
+      a {
+        color: #d9b36c;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p>La pagina richiesta non è disponibile. Ti stiamo riportando alla home.</p>
+      <p><a id="home-link" href="#">Apri la home</a></p>
+    </main>
+    <script>
+      const homeLink = document.getElementById("home-link");
+
+      async function resolveHomePath() {
+        const segments = window.location.pathname.split("/").filter(Boolean);
+        const candidates = segments.length > 1 ? [`/${segments[0]}/index.html`, "/index.html"] : ["/index.html"];
+        const probes = candidates.map(async (candidate) => {
+          const response = await fetch(candidate, { method: "HEAD", cache: "no-store" });
+          if (!response.ok) {
+            throw new Error();
+          }
+          return candidate;
+        });
+
+        try {
+          return await Promise.any(probes);
+        } catch {
+          return candidates[0];
+        }
+      }
+
+      resolveHomePath().then((homePath) => {
+        homeLink.href = homePath;
+        window.location.replace(`${homePath}${window.location.hash}`);
+      });
+    </script>
+  </body>
+</html>
