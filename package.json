@@ -1,0 +1,16 @@
+{
+  "name": "repository-name-ppropriet-di-lusso-a-bergamo",
+  "version": "1.0.0",
+  "description": "Esperienza digitale in italiano per proprietà di lusso a Bergamo",
+  "scripts": {
+    "test": "echo \"Nessun test configurato\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/enricorizz/Repository-name-ppropriet-di-lusso-a-Bergamo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "private": true
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="Rizzetti Immobiliare Agent: esperienza in italiano per scoprire proprietà di lusso a Bergamo con interfaccia ottimizzata per iPhone."
+    />
+    <meta name="theme-color" content="#101522" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>Rizzetti Immobiliare Agent</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="hero" id="top">
+      <div class="hero__overlay"></div>
+      <nav class="nav container" aria-label="Navigazione principale">
+        <div class="brand">
+          <span class="brand__eyebrow">Bergamo · Luxury Real Estate</span>
+          <strong>Rizzetti Immobiliare Agent</strong>
+        </div>
+        <a class="nav__cta" href="#consulenza">Richiedi consulenza</a>
+      </nav>
+
+      <div class="hero__content container">
+        <div class="hero__copy">
+          <p class="kicker">Interamente in italiano</p>
+          <h1>Proprietà di lusso a Bergamo, presentate al meglio anche su iPhone.</h1>
+          <p class="hero__lead">
+            Una vetrina digitale elegante, veloce e orientata alla conversione per clienti interessati a residenze
+            esclusive, attici panoramici e ville di pregio.
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#proprieta">Esplora le proprietà</a>
+            <a class="button button--secondary" href="#servizi">Scopri i servizi</a>
+          </div>
+          <ul class="hero__stats" aria-label="Punti di forza">
+            <li><strong>100%</strong><span>Esperienza in italiano</span></li>
+            <li><strong>Mobile-first</strong><span>Ottimizzata per iPhone</span></li>
+            <li><strong>Premium</strong><span>Tono e stile luxury</span></li>
+          </ul>
+        </div>
+
+        <aside class="hero-card" id="consulenza">
+          <p class="hero-card__eyebrow">Selezione guidata</p>
+          <h2>Trova la soluzione più adatta in meno di un minuto</h2>
+          <form id="advisor-form" class="advisor-form">
+            <label>
+              <span>Tipologia</span>
+              <select name="tipologia">
+                <option value="tutte">Tutte</option>
+                <option value="villa">Villa</option>
+                <option value="attico">Attico</option>
+                <option value="dimora">Dimora storica</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Budget</span>
+              <select name="budget">
+                <option value="tutti">Qualsiasi budget</option>
+                <option value="1500000">Fino a €1,5M</option>
+                <option value="2500000">Fino a €2,5M</option>
+                <option value="9999999">Oltre €2,5M</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Priorità</span>
+              <select name="priorita">
+                <option value="vista">Vista panoramica</option>
+                <option value="privacy">Massima privacy</option>
+                <option value="posizione">Posizione centrale</option>
+              </select>
+            </label>
+
+            <button class="button button--primary button--full" type="submit">Ottieni la raccomandazione</button>
+          </form>
+
+          <div id="advisor-result" class="advisor-result" aria-live="polite">
+            Seleziona le tue preferenze per ricevere una proposta iniziale.
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <main>
+      <section class="section container" id="proprieta">
+        <div class="section-heading">
+          <p class="kicker">Proprietà in evidenza</p>
+          <h2>Una selezione curata per clienti che cercano esclusività reale.</h2>
+        </div>
+        <div id="property-grid" class="property-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="section section--alt" id="servizi">
+        <div class="container services">
+          <div class="section-heading">
+            <p class="kicker">Servizi</p>
+            <h2>Supporto commerciale, consulenziale e digitale con approccio premium.</h2>
+          </div>
+
+          <div class="services__grid">
+            <article class="info-card">
+              <h3>Valorizzazione immobiliare</h3>
+              <p>Presentazione elegante dell’immobile, posizionamento chiaro e focus sui plus di valore.</p>
+            </article>
+            <article class="info-card">
+              <h3>Lead qualificati</h3>
+              <p>Esperienza pensata per facilitare richieste di contatto precise e ad alto potenziale.</p>
+            </article>
+            <article class="info-card">
+              <h3>Esperienza mobile</h3>
+              <p>Interfaccia scorrevole, leggibile e comoda da usare su iPhone anche con una sola mano.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="cta-panel">
+          <div>
+            <p class="kicker">Pronto per la versione successiva</p>
+            <h2>Base pronta per essere collegata a CRM, WhatsApp Business o richieste reali.</h2>
+          </div>
+          <a class="button button--primary" href="#consulenza">Inizia da qui</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__content">
+        <div>
+          <strong>Rizzetti Immobiliare Agent</strong>
+          <p>Vetrina immobiliare di lusso in italiano, con esperienza mobile-first.</p>
+        </div>
+        <a href="#top" class="footer__link">Torna su</a>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
