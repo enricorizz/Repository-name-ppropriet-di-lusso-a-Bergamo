@@ -2,6 +2,7 @@ const CACHE_NAME = "rizzetti-agent-v1";
 const FALLBACK_PAGE = "./index.html";
 const OFFLINE_ASSETS = [
   FALLBACK_PAGE,
+  "./404.html",
   "./styles.css",
   "./script.js",
   "./manifest.webmanifest",
@@ -30,35 +31,49 @@ self.addEventListener("fetch", (event) => {
   }
 
   event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
+    (async () => {
+      const isNavigationRequest = event.request.mode === "navigate";
+      const cachedResponse = await caches.match(event.request);
+
       if (cachedResponse) {
         return cachedResponse;
       }
 
-      return fetch(event.request)
-        .then(async (networkResponse) => {
-          const responseClone = networkResponse.clone();
-          const cache = await caches.open(CACHE_NAME);
-          await cache.put(event.request, responseClone);
-          return networkResponse;
-        })
-        .catch(async () => {
-          const fallbackResponse = await caches.match(FALLBACK_PAGE);
+      try {
+        const networkResponse = await fetch(event.request);
 
-          return (
-            fallbackResponse ||
-            new Response(
-              "Questa pagina non è disponibile offline in questo momento. Verifica la connessione, ricarica il sito e riprova.",
-              {
-                status: 503,
-                statusText: "Offline",
-                headers: {
-                  "Content-Type": "text/plain; charset=utf-8",
-                },
-              },
-            )
-          );
-        });
-    })
+        if (isNavigationRequest && !networkResponse.ok) {
+          const fallbackResponse = await caches.match(FALLBACK_PAGE);
+          if (fallbackResponse) {
+            return fallbackResponse;
+          }
+        }
+
+        if (networkResponse.ok && new URL(event.request.url).origin === self.location.origin) {
+          const cache = await caches.open(CACHE_NAME);
+          await cache.put(event.request, networkResponse.clone());
+        }
+
+        return networkResponse;
+      } catch {
+        if (isNavigationRequest) {
+          const fallbackResponse = await caches.match(FALLBACK_PAGE);
+          if (fallbackResponse) {
+            return fallbackResponse;
+          }
+        }
+
+        return new Response(
+          "Questa pagina non è disponibile offline in questo momento. Verifica la connessione, ricarica il sito e riprova.",
+          {
+            status: 503,
+            statusText: "Offline",
+            headers: {
+              "Content-Type": "text/plain; charset=utf-8",
+            },
+          },
+        );
+      }
+    })()
   );
 });

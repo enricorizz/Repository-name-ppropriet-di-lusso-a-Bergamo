@@ -2,7 +2,7 @@
   "name": "Rizzetti Immobiliare Agent",
   "short_name": "Rizzetti Agent",
   "description": "Esperienza premium in italiano per proprietà di lusso a Bergamo.",
-  "start_url": "./",
+  "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "background_color": "#0d111b",
