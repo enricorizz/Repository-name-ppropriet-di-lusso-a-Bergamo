@@ -57,6 +57,10 @@ function euro(amount) {
   }).format(amount);
 }
 
+/**
+ * Escapes user-controlled text before injecting it into HTML fragments.
+ * This keeps recommendation output safe when personalizing content.
+ */
 function escapeHtml(text) {
   return String(text).replace(/[&<>"']/g, (character) => {
     const entities = {
@@ -80,8 +84,12 @@ function buildInquiryMessage(property, preferences, customerName) {
   );
 }
 
+function normalizedWhatsappNumber() {
+  return contacts.whatsapp.replace(/\D/g, "");
+}
+
 function whatsappHref(message) {
-  return `https://wa.me/${contacts.whatsapp}?text=${encodeURIComponent(message)}`;
+  return `https://wa.me/${normalizedWhatsappNumber()}?text=${encodeURIComponent(message)}`;
 }
 
 function mailtoHref(subject, body, email = contacts.officeEmail) {

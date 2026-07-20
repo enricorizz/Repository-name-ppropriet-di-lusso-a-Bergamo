@@ -1,7 +1,7 @@
 const CACHE_NAME = "rizzetti-agent-v1";
+const FALLBACK_PAGE = "./index.html";
 const OFFLINE_ASSETS = [
-  "./",
-  "./index.html",
+  FALLBACK_PAGE,
   "./styles.css",
   "./script.js",
   "./manifest.webmanifest",
@@ -43,11 +43,11 @@ self.addEventListener("fetch", (event) => {
           return networkResponse;
         })
         .catch(async () => {
-          const fallbackResponse = await caches.match("./index.html");
+          const fallbackResponse = await caches.match(FALLBACK_PAGE);
 
           return (
             fallbackResponse ||
-            new Response("Contenuto temporaneamente non disponibile offline.", {
+            new Response("Contenuto non disponibile offline. Verifica la tua connessione e riprova.", {
               status: 503,
               statusText: "Offline",
               headers: {
