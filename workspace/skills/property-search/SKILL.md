@@ -38,7 +38,10 @@ node scripts/property-search.js [filtri]
 | `--zona STR` | `--zona Alta` | Filtra per zona (parziale) |
 | `--tipologia STR` | `--tipologia villa` | Tipo immobile |
 | `--camere-min N` | `--camere-min 3` | Numero minimo camere |
+| `--superficie-min N` | `--superficie-min 100` | Superficie minima (mq) |
+| `--superficie-max N` | `--superficie-max 200` | Superficie massima (mq) |
 | `--caratteristica STR` | `--caratteristica piscina` | Caratteristica (ripetibile) |
+| `--sort CHIAVE` | `--sort prezzo-asc` | Ordinamento (prezzo-asc, prezzo-desc, superficie-asc, superficie-desc) |
 
 ## Output
 

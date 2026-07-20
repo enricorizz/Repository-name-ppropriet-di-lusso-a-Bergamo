@@ -83,3 +83,28 @@ test('lead non valido: normalized è null', () => {
   const result = validate({ nome: 'Mario' });
   assert.equal(result.normalized, null);
 });
+
+test('lead valido: budget_min presente e normalizzato', () => {
+  const result = validate({ nome: 'Mario', email: 'mario@test.it', budget_min: 100000 });
+  assert.equal(result.valid, true);
+  assert.equal(result.normalized.budget_min, 100000);
+});
+
+test('lead non valido: budget_min negativo', () => {
+  const result = validate({ nome: 'Mario', email: 'mario@test.it', budget_min: -500 });
+  assert.equal(result.valid, false);
+  assert.ok(result.errors.some((e) => e.toLowerCase().includes('budget_min')));
+});
+
+test('lead non valido: budget_min > budget_max', () => {
+  const result = validate({ nome: 'Mario', email: 'mario@test.it', budget_min: 500000, budget_max: 200000 });
+  assert.equal(result.valid, false);
+  assert.ok(result.errors.some((e) => e.toLowerCase().includes('budget')));
+});
+
+test('lead valido: budget_min e budget_max coerenti', () => {
+  const result = validate({ nome: 'Mario', email: 'mario@test.it', budget_min: 200000, budget_max: 500000 });
+  assert.equal(result.valid, true);
+  assert.equal(result.normalized.budget_min, 200000);
+  assert.equal(result.normalized.budget_max, 500000);
+});

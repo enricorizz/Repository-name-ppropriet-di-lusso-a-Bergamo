@@ -18,21 +18,40 @@ node scripts/property-search.js \
   --budget-max 600000 \
   --tipologia appartamento \
   --camere-min 3 \
-  --caratteristica piscina
+  --caratteristica piscina \
+  --superficie-min 100 \
+  --sort prezzo-asc
 ```
 
 Output: `{ results: [...], count: N, disclaimer: "..." }`
+
+**Filtri disponibili:**
+
+| Flag | Descrizione |
+|------|-------------|
+| `--budget-min N` | Prezzo minimo in EUR |
+| `--budget-max N` | Prezzo massimo in EUR |
+| `--comune STR` | Comune (case-insensitive) |
+| `--zona STR` | Zona (parziale) |
+| `--tipologia STR` | Tipo immobile (appartamento, villa, attico, loft, casale…) |
+| `--camere-min N` | Numero minimo di camere |
+| `--superficie-min N` | Superficie minima in mq |
+| `--superficie-max N` | Superficie massima in mq |
+| `--caratteristica STR` | Caratteristica (parziale, ripetibile) |
+| `--sort CHIAVE` | Ordinamento: `prezzo-asc`, `prezzo-desc`, `superficie-asc`, `superficie-desc` |
 
 ### lead-validate
 
 Valida e normalizza i dati di un lead (richiesta di contatto).
 
 ```bash
-echo '{"nome":"Mario","email":"mario@test.it","interesse":"acquisto"}' \
+echo '{"nome":"Mario","email":"mario@test.it","interesse":"acquisto","budget_min":150000,"budget_max":400000}' \
   | node scripts/lead-validate.js
 ```
 
 Output: `{ valid: true|false, normalized: {...}, errors: [...] }`
+
+**Campi supportati:** `nome`* , `email`* , `cognome`, `telefono`, `interesse` (acquisto/vendita/affitto/valutazione/informazioni), `budget_min`, `budget_max`, `messaggio` (max 2000 caratteri). I campi marcati con * sono obbligatori.
 
 ### visit-request
 

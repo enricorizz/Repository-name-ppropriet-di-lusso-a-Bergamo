@@ -33,7 +33,8 @@ Usa questa skill quando l'utente:
 - Cognome
 - Telefono
 - Tipo di interesse: acquisto, affitto, vendita, valutazione, informazioni
-- Budget massimo indicativo
+- Budget minimo indicativo (`budget_min`)
+- Budget massimo indicativo (`budget_max`)
 - Messaggio libero
 
 ## Informativa privacy (obbligatoria prima della raccolta)
@@ -45,7 +46,7 @@ Prima di raccogliere qualsiasi dato, di' all'utente:
 ## Validazione dati
 
 ```bash
-echo '{"nome":"...","email":"...","interesse":"acquisto"}' \
+echo '{"nome":"...","email":"...","interesse":"acquisto","budget_min":100000,"budget_max":400000}' \
   | node scripts/lead-validate.js
 ```
 

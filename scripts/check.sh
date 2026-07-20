@@ -96,7 +96,68 @@ if [[ $FOUND_SECRETS -eq 0 ]]; then
 fi
 
 echo ""
-echo "=== Check: disclaimer nel catalogo demo ==="
+echo "=== Check: validazione proprietà contro schema JSON ==="
+
+SCHEMA="$REPO_ROOT/data/property.schema.json"
+CATALOG="$REPO_ROOT/data/properties.demo.json"
+
+node -e "
+const fs = require('fs');
+const schemaPath = process.argv[1];
+const catalogPath = process.argv[2];
+
+const schema = JSON.parse(fs.readFileSync(schemaPath, 'utf8'));
+const catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
+
+const required = schema.required || [];
+const props = schema.properties || {};
+let errors = 0;
+
+function checkType(val, type) {
+  if (type === 'integer') return typeof val === 'number' && Number.isInteger(val);
+  if (type === 'array') return Array.isArray(val);
+  return typeof val === type;
+}
+
+for (const p of catalog.properties) {
+  for (const field of required) {
+    if (p[field] === undefined) {
+      process.stderr.write('  ✗ Campo obbligatorio mancante «' + field + '» in ' + p.id + '\n');
+      errors++;
+    }
+  }
+  for (const [field, def] of Object.entries(props)) {
+    if (p[field] === undefined) continue;
+    const val = p[field];
+    const type = def.type;
+    if (type && !checkType(val, type)) {
+      process.stderr.write('  ✗ Tipo errato per «' + field + '» in ' + p.id + ': atteso ' + type + ', trovato ' + (Array.isArray(val) ? 'array' : typeof val) + '\n');
+      errors++;
+    }
+    if (def.enum && !def.enum.includes(val)) {
+      process.stderr.write('  ✗ Valore non valido per «' + field + '» in ' + p.id + ': «' + val + '» non è tra ' + def.enum.join(', ') + '\n');
+      errors++;
+    }
+    if (def.minimum !== undefined && typeof val === 'number' && val < def.minimum) {
+      process.stderr.write('  ✗ Valore sotto il minimo per «' + field + '» in ' + p.id + ': ' + val + ' < ' + def.minimum + '\n');
+      errors++;
+    }
+    if (def.pattern && typeof val === 'string' && !new RegExp(def.pattern).test(val)) {
+      process.stderr.write('  ✗ Pattern non rispettato per «' + field + '» in ' + p.id + ': «' + val + '\"\n');
+      errors++;
+    }
+  }
+}
+
+if (errors === 0) {
+  process.stdout.write('  ✔ Tutte le proprietà rispettano lo schema\n');
+  process.exit(0);
+} else {
+  process.exit(1);
+}
+" "$SCHEMA" "$CATALOG" || ERRORS=$((ERRORS + 1))
+
+
 
 if grep -q '"stato_demo": true' "$REPO_ROOT/data/properties.demo.json"; then
   pass "stato_demo=true presente nel catalogo"

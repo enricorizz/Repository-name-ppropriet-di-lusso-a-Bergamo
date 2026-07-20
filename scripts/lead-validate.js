@@ -81,6 +81,16 @@ function validate(raw) {
     }
   }
 
+  // budget_min (opzionale)
+  if (raw.budget_min !== undefined) {
+    const bmin = Number(raw.budget_min);
+    if (isNaN(bmin) || bmin < 0) {
+      errors.push('budget_min deve essere un numero positivo');
+    } else {
+      normalized.budget_min = bmin;
+    }
+  }
+
   // budget_max (opzionale)
   if (raw.budget_max !== undefined) {
     const bm = Number(raw.budget_max);
@@ -89,6 +99,11 @@ function validate(raw) {
     } else {
       normalized.budget_max = bm;
     }
+  }
+
+  // coerenza budget
+  if (normalized.budget_min !== undefined && normalized.budget_max !== undefined && normalized.budget_min > normalized.budget_max) {
+    errors.push('budget_min non può essere maggiore di budget_max');
   }
 
   // messaggio (opzionale)
