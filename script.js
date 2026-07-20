@@ -102,7 +102,7 @@ function renderProperties(items, preferences) {
           <div class="property-card__visual property-card__visual--${property.visual}">
             <div class="property-card__scene">
               <span>${property.area}</span>
-              <span>${priorityLabel} · Visual placeholder premium</span>
+              <span>${priorityLabel} · Placeholder visivo premium</span>
             </div>
           </div>
           <span class="property-card__tag">${property.label}</span>
@@ -205,7 +205,9 @@ function recommend({ tipologia, budget, priorita, nome }) {
 function registerServiceWorker() {
   if ("serviceWorker" in navigator) {
     window.addEventListener("load", () => {
-      navigator.serviceWorker.register("./service-worker.js").catch(() => {});
+      navigator.serviceWorker.register("./service-worker.js").catch((error) => {
+        console.warn("Registrazione del service worker non riuscita.", error);
+      });
     });
   }
 }

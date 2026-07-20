@@ -35,12 +35,27 @@ self.addEventListener("fetch", (event) => {
         return cachedResponse;
       }
 
-      return fetch(event.request).then((networkResponse) => {
-        const responseClone = networkResponse.clone();
+      return fetch(event.request)
+        .then((networkResponse) => {
+          const responseClone = networkResponse.clone();
 
-        caches.open(CACHE_NAME).then((cache) => cache.put(event.request, responseClone));
-        return networkResponse;
-      }).catch(() => caches.match("./index.html"));
+          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, responseClone));
+          return networkResponse;
+        })
+        .catch(async () => {
+          const fallbackResponse = await caches.match("./index.html");
+
+          return (
+            fallbackResponse ||
+            new Response("Contenuto temporaneamente non disponibile offline.", {
+              status: 503,
+              statusText: "Offline",
+              headers: {
+                "Content-Type": "text/plain; charset=utf-8",
+              },
+            })
+          );
+        });
     })
   );
 });
