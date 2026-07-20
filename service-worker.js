@@ -1,4 +1,4 @@
-const CACHE_NAME = "rizzetti-agent-v1";
+const CACHE_NAME = "rizzetti-agent-v2";
 const FALLBACK_PAGE = "./index.html";
 const OFFLINE_ASSETS = [
   FALLBACK_PAGE,

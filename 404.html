@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reindirizzamento in corso</title>
-    <meta http-equiv="refresh" content="0; url=./index.html" />
     <style>
       body {
         margin: 0;
@@ -26,16 +25,33 @@
   <body>
     <main>
       <p>La pagina richiesta non è disponibile. Ti stiamo riportando alla home.</p>
-      <p><a id="home-link" href="/index.html">Apri la home</a></p>
+      <p><a id="home-link" href="#">Apri la home</a></p>
     </main>
     <script>
-      const repoPath = "/Repository-name-ppropriet-di-lusso-a-Bergamo/";
-      const isProjectPage = window.location.hostname.endsWith("github.io");
-      const homePath = isProjectPage ? `${repoPath}index.html` : "/index.html";
       const homeLink = document.getElementById("home-link");
 
-      homeLink.href = homePath;
-      window.location.replace(`${homePath}${window.location.hash}`);
+      async function resolveHomePath() {
+        const segments = window.location.pathname.split("/").filter(Boolean);
+        const candidates = segments.length > 1 ? [`/${segments[0]}/index.html`, "/index.html"] : ["/index.html"];
+
+        for (const candidate of candidates) {
+          try {
+            const response = await fetch(candidate, { method: "HEAD", cache: "no-store" });
+            if (response.ok) {
+              return candidate;
+            }
+          } catch {
+            // Ignora errori temporanei e prova il candidato successivo.
+          }
+        }
+
+        return candidates[0];
+      }
+
+      resolveHomePath().then((homePath) => {
+        homeLink.href = homePath;
+        window.location.replace(`${homePath}${window.location.hash}`);
+      });
     </script>
   </body>
 </html>
