@@ -36,10 +36,10 @@ self.addEventListener("fetch", (event) => {
       }
 
       return fetch(event.request)
-        .then((networkResponse) => {
+        .then(async (networkResponse) => {
           const responseClone = networkResponse.clone();
-
-          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, responseClone));
+          const cache = await caches.open(CACHE_NAME);
+          await cache.put(event.request, responseClone);
           return networkResponse;
         })
         .catch(async () => {

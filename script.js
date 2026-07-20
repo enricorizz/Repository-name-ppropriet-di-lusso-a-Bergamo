@@ -3,7 +3,7 @@ const contacts = {
   officeEmail: "info@rizzetti.it",
   ownerEmail: "enrico@rizzetti.it",
   officePhone: "+39035212562",
-  whatsapp: "39335293550",
+  whatsapp: "+39335293550",
 };
 
 const properties = [
@@ -71,7 +71,7 @@ function escapeHtml(text) {
       "'": "&#39;",
     };
 
-    return entities[character];
+    return entities[character] || character;
   });
 }
 
@@ -84,12 +84,12 @@ function buildInquiryMessage(property, preferences, customerName) {
   );
 }
 
-function normalizedWhatsappNumber() {
+function normalizeWhatsappNumber() {
   return contacts.whatsapp.replace(/\D/g, "");
 }
 
 function whatsappHref(message) {
-  return `https://wa.me/${normalizedWhatsappNumber()}?text=${encodeURIComponent(message)}`;
+  return `https://wa.me/${normalizeWhatsappNumber()}?text=${encodeURIComponent(message)}`;
 }
 
 function mailtoHref(subject, body, email = contacts.officeEmail) {
@@ -110,7 +110,7 @@ function renderProperties(items, preferences) {
           <div class="property-card__visual property-card__visual--${property.visual}">
             <div class="property-card__scene">
               <span>${property.area}</span>
-              <span>${priorityLabel} · Placeholder visivo premium</span>
+              <span>${priorityLabel} · Anteprima premium</span>
             </div>
           </div>
           <span class="property-card__tag">${property.label}</span>
@@ -220,6 +220,13 @@ function registerServiceWorker() {
   }
 }
 
+function hydrateWhatsappLinks() {
+  document.querySelectorAll("[data-whatsapp-link]").forEach((link) => {
+    link.href = whatsappHref("Buongiorno, desidero maggiori informazioni sulle proprietà di lusso a Bergamo.");
+    link.target = "_blank";
+  });
+}
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const data = new FormData(form);
@@ -233,4 +240,5 @@ form.addEventListener("submit", (event) => {
 });
 
 renderProperties(properties, defaultPreferences());
+hydrateWhatsappLinks();
 registerServiceWorker();
