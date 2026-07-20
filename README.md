@@ -43,7 +43,7 @@ Poi visita: [http://localhost:4173](http://localhost:4173)
 | 🌐 Sito web | [www.Rizzetti.it](https://www.Rizzetti.it) |
 | 📧 Email ufficio | [Info@Rizzetti.it](mailto:Info@Rizzetti.it) |
 | 📧 Email titolare | [Enrico@Rizzetti.it](mailto:Enrico@Rizzetti.it) |
-| 📞 Telefono | [035 21 25 62](tel:+390352125620) |
+| 📞 Telefono | [035 21 25 62](tel:+39035212562) |
 | 💬 WhatsApp | [335 29 35 50](https://wa.me/393352935550) |
 
 ---

@@ -151,8 +151,11 @@ function renderContacts() {
     const a = document.createElement("a");
     a.className = "contact-item";
     a.href = href;
-    a.setAttribute("target", href.startsWith("http") ? "_blank" : "_self");
-    a.setAttribute("rel", "noopener noreferrer");
+    const isExternal = href.startsWith("http");
+    a.setAttribute("target", isExternal ? "_blank" : "_self");
+    if (isExternal) {
+      a.setAttribute("rel", "noopener noreferrer");
+    }
     a.innerHTML = `
       <span class="contact-icon">${icon}</span>
       <span>
