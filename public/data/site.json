@@ -1,0 +1,85 @@
+{
+  "agency": {
+    "name": "Rizzetti Immobiliare",
+    "claim": "Luxury Living Bergamo",
+    "owner": "Enrico Rizzetti",
+    "email": "enrico@rizzetti.it",
+    "phone": "+39 035 000 000",
+    "whatsapp": "+39 035 000 000",
+    "address": "Bergamo, Italia",
+    "vat": "P.IVA 00000000000",
+    "hours": "Lun–Ven 9:00–19:00 · Sab su appuntamento",
+    "social": {
+      "instagram": "https://instagram.com/",
+      "linkedin": "https://linkedin.com/",
+      "facebook": "https://facebook.com/"
+    }
+  },
+  "stats": [
+    { "value": "20+", "label": "Anni di esperienza sul territorio" },
+    { "value": "€250M+", "label": "Transazioni intermediate" },
+    { "value": "98%", "label": "Clienti che ci raccomandano" },
+    { "value": "48h", "label": "Tempo medio di primo riscontro" }
+  ],
+  "services": [
+    {
+      "icon": "key",
+      "title": "Vendita di immobili di prestigio",
+      "text": "Valorizziamo e vendiamo ville, attici e dimore storiche con una strategia su misura, riservata e orientata al risultato."
+    },
+    {
+      "icon": "search",
+      "title": "Ricerca personalizzata",
+      "text": "Un servizio di property finding dedicato: ascoltiamo i tuoi desideri e selezioniamo solo immobili in linea, anche fuori mercato."
+    },
+    {
+      "icon": "chart",
+      "title": "Valutazione professionale",
+      "text": "Analisi di mercato accurate e valutazioni certificate, basate su dati reali e sulla profonda conoscenza delle micro-zone di Bergamo."
+    },
+    {
+      "icon": "camera",
+      "title": "Home staging & servizi fotografici",
+      "text": "Fotografie professionali, video, tour virtuali 3D e home staging per presentare ogni proprietà al suo massimo potenziale."
+    },
+    {
+      "icon": "shield",
+      "title": "Assistenza legale e notarile",
+      "text": "Ti accompagniamo in ogni fase — dalla proposta al rogito — con una rete di professionisti di fiducia e totale trasparenza."
+    },
+    {
+      "icon": "globe",
+      "title": "Clientela internazionale",
+      "text": "Promuoviamo le proprietà su portali e network internazionali, assistendo acquirenti esteri in italiano, inglese e altre lingue."
+    }
+  ],
+  "process": [
+    { "step": "01", "title": "Ascolto", "text": "Un incontro riservato per comprendere obiettivi, tempi ed esigenze." },
+    { "step": "02", "title": "Strategia", "text": "Valutazione, piano di valorizzazione e strategia di vendita o ricerca su misura." },
+    { "step": "03", "title": "Presentazione", "text": "Servizi fotografici, tour virtuali e promozione mirata sui canali giusti." },
+    { "step": "04", "title": "Negoziazione", "text": "Selezione dei contatti qualificati e negoziazione riservata nel tuo interesse." },
+    { "step": "05", "title": "Rogito", "text": "Assistenza legale e notarile completa fino alla consegna delle chiavi." }
+  ],
+  "zones": [
+    { "name": "Città Alta", "text": "Il cuore storico racchiuso nelle Mura Venete UNESCO: palazzi nobiliari, attici panoramici e viste indimenticabili." },
+    { "name": "San Vigilio", "text": "Il colle più esclusivo di Bergamo, dominato da ville d'epoca immerse nel verde con panorami dominanti sulla città." },
+    { "name": "Colli di Bergamo", "text": "Il Parco dei Colli offre ville contemporanee e residenze immerse nella natura a pochi minuti dal centro." },
+    { "name": "Centro & Città Bassa", "text": "L'eleganza urbana del Sentierone e dei viali: appartamenti signorili in palazzi d'epoca e penthouse di design." },
+    { "name": "Borgo Santa Caterina", "text": "Un quartiere vivace e ricercato, tra atelier e botteghe, con dimore liberty e loft dal carattere unico." },
+    { "name": "Hinterland d'élite", "text": "Mozzo, Almè, Ponte San Pietro, Torre Boldone: ville e tenute con parco, comode ai servizi e ai collegamenti." }
+  ],
+  "testimonials": [
+    { "name": "Famiglia M.", "role": "Acquirenti · Città Alta", "text": "Hanno trovato per noi l'attico dei nostri sogni prima ancora che fosse sul mercato. Riservatezza e competenza impeccabili." },
+    { "name": "Dott. R.", "role": "Venditore · San Vigilio", "text": "La villa di famiglia è stata venduta al giusto valore in tempi rapidi. Un servizio sartoriale, dal primo incontro al rogito." },
+    { "name": "Ms. K. — London", "role": "International buyer", "text": "As a foreign buyer I felt guided at every step. Professional, transparent and truly knowledgeable about Bergamo." },
+    { "name": "Arch. B.", "role": "Acquirente · Colli di Bergamo", "text": "Consulenza di altissimo livello, attenzione al dettaglio e una conoscenza del territorio davvero rara." }
+  ],
+  "faq": [
+    { "q": "Come funziona la valutazione di un immobile?", "a": "Effettuiamo un sopralluogo riservato, analizziamo i dati di mercato della micro-zona e le caratteristiche specifiche dell'immobile, consegnando una valutazione dettagliata e motivata, senza impegno." },
+    { "q": "Trattate anche immobili non pubblicati (off-market)?", "a": "Sì. Una parte importante del nostro portafoglio è riservata e non pubblicata online, per garantire la massima discrezione a venditori e acquirenti. Contattaci per accedere alle proposte esclusive." },
+    { "q": "Assistete acquirenti stranieri?", "a": "Assolutamente. Seguiamo clientela internazionale offrendo assistenza in più lingue, supporto per codice fiscale, apertura conti, aspetti fiscali e tutta la parte notarile." },
+    { "q": "Quali sono i costi del vostro servizio?", "a": "La provvigione viene concordata in modo trasparente all'inizio del mandato. Per la ricerca personalizzata e la vendita definiamo insieme condizioni chiare, senza sorprese." },
+    { "q": "Offrite home staging e servizi fotografici?", "a": "Sì, ogni immobile viene presentato con servizio fotografico professionale, video, tour virtuale 3D e, quando utile, home staging, così da valorizzarne al massimo il potenziale." },
+    { "q": "In quali zone operate?", "a": "Bergamo città — Città Alta, San Vigilio, Colli, Centro — e l'hinterland di pregio come Mozzo, Almè, Ponte San Pietro, Sorisole e Torre Boldone." }
+  ]
+}

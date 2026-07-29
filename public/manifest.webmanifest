@@ -1,0 +1,14 @@
+{
+  "name": "Rizzetti Immobiliare — Luxury Living Bergamo",
+  "short_name": "Rizzetti",
+  "description": "Proprietà di lusso a Bergamo: ville, attici e dimore di prestigio.",
+  "lang": "it",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#14140f",
+  "theme_color": "#14140f",
+  "icons": [
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

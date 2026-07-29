@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contatti — Rizzetti Immobiliare | Consulenza Immobiliare di Lusso a Bergamo</title>
+  <meta name="description" content="Contatta Rizzetti Immobiliare per una consulenza riservata sulle proprietà di lusso a Bergamo. Vendita, ricerca personalizzata e valutazioni gratuite.">
+  <link rel="canonical" href="https://www.rizzetti.it/contatti.html">
+  <meta name="theme-color" content="#14140f">
+  <meta property="og:title" content="Contatti — Rizzetti Immobiliare">
+  <meta property="og:image" content="assets/img/og-image.svg">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html" aria-label="Rizzetti Immobiliare — Home">
+        <img class="brand__mark" src="assets/img/logo-mark.svg" alt="">
+        <span class="brand__text"><span class="brand__name">Rizzetti</span><span class="brand__tag">Luxury Living Bergamo</span></span>
+      </a>
+      <nav class="nav" aria-label="Navigazione principale">
+        <a href="index.html">Home</a>
+        <a href="immobili.html">Immobili</a>
+        <a href="servizi.html">Servizi</a>
+        <a href="chi-siamo.html">Chi Siamo</a>
+        <a href="contatti.html" aria-current="page">Contatti</a>
+      </nav>
+      <div class="header-cta">
+        <a class="btn btn--sm" href="tel:+39035000000">Chiama ora</a>
+        <button class="nav-toggle" aria-label="Apri il menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Percorso" style="color:rgba(246,241,231,0.6);margin-bottom:16px">
+          <a href="index.html" style="color:var(--gold-2)">Home</a> <span>/</span> <span>Contatti</span>
+        </nav>
+        <span class="eyebrow">Parliamone</span>
+        <h1>Iniziamo una conversazione</h1>
+        <p>Che tu voglia vendere, acquistare o semplicemente esplorare le possibilità, siamo qui per ascoltarti. Ti risponderemo entro 48 ore.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="contact-grid">
+          <div data-reveal>
+            <span class="eyebrow">Scrivici</span>
+            <h2 style="font-size:clamp(1.8rem,3.5vw,2.6rem)">Richiedi una consulenza riservata</h2>
+            <p style="color:var(--muted-2);margin-top:12px">Compila il modulo: un consulente ti ricontatterà personalmente.</p>
+            <form data-lead-form data-email="enrico@rizzetti.it" style="margin-top:26px">
+              <div class="form-grid">
+                <div class="form-field"><label for="c-name">Nome e cognome *</label><input id="c-name" type="text" name="name" required autocomplete="name"></div>
+                <div class="form-field"><label for="c-email">Email *</label><input id="c-email" type="email" name="email" required autocomplete="email"></div>
+                <div class="form-field"><label for="c-phone">Telefono</label><input id="c-phone" type="tel" name="phone" autocomplete="tel"></div>
+                <div class="form-field"><label for="c-subject">Motivo del contatto</label>
+                  <select id="c-subject" name="subject">
+                    <option>Voglio acquistare</option>
+                    <option>Voglio vendere</option>
+                    <option>Ricerca personalizzata</option>
+                    <option>Valutazione gratuita</option>
+                    <option>Locazione</option>
+                    <option>Altro</option>
+                  </select>
+                </div>
+                <div class="form-field full"><label for="c-message">Messaggio</label><textarea id="c-message" name="message" rows="5" placeholder="Raccontaci cosa cerchi o cosa desideri vendere…"></textarea></div>
+              </div>
+              <label class="form-consent" style="margin-top:16px">
+                <input type="checkbox" name="consent" required>
+                <span>Ho letto e accetto l'<a class="text-gold" href="privacy.html" target="_blank">informativa sulla privacy</a> e acconsento al trattamento dei miei dati per essere ricontattato. *</span>
+              </label>
+              <div style="margin-top:22px"><button type="submit" class="btn">Invia richiesta</button></div>
+              <div data-note></div>
+            </form>
+          </div>
+
+          <div data-reveal data-delay="1">
+            <span class="eyebrow">I nostri recapiti</span>
+            <h2 style="font-size:clamp(1.8rem,3.5vw,2.6rem)">Rizzetti Immobiliare</h2>
+            <ul class="contact-list">
+              <li><span data-icon="pin"></span><div><b>Sede</b><span data-agency="address">Bergamo, Italia</span></div></li>
+              <li><span data-icon="phone"></span><div><b>Telefono</b><a data-agency="phone" href="#">+39 035 000 000</a></div></li>
+              <li><span data-icon="mail"></span><div><b>Email</b><a data-agency="email" href="#">enrico@rizzetti.it</a></div></li>
+              <li><span data-icon="clock"></span><div><b>Orari</b><span data-agency="hours">Lun–Ven 9:00–19:00 · Sab su appuntamento</span></div></li>
+            </ul>
+            <div class="pd-map" style="margin-top:26px;aspect-ratio:16/11">
+              <iframe title="Mappa di Bergamo" src="https://www.openstreetmap.org/export/embed.html?bbox=9.6448,45.6849,9.6952,45.7149&layer=mapnik&marker=45.6983,9.6773" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <p style="margin-top:12px"><a class="link-arrow" href="https://www.openstreetmap.org/?mlat=45.6983&mlon=9.6773#map=14/45.6983/9.6773" target="_blank" rel="noopener">Apri la mappa di Bergamo <span data-icon="arrow"></span></a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="Rizzetti Immobiliare">
+            <img class="brand__mark" src="assets/img/logo-mark.svg" alt="">
+            <span class="brand__text"><span class="brand__name">Rizzetti</span><span class="brand__tag">Luxury Living Bergamo</span></span>
+          </a>
+          <p class="footer-about">Agenzia immobiliare specializzata in proprietà di prestigio a Bergamo e provincia. Riservatezza, competenza e un servizio sartoriale dalla ricerca al rogito.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram" rel="noopener"><span data-icon="instagram"></span></a>
+            <a href="#" aria-label="LinkedIn" rel="noopener"><span data-icon="linkedin"></span></a>
+            <a href="#" aria-label="Facebook" rel="noopener"><span data-icon="facebook"></span></a>
+          </div>
+        </div>
+        <div><h4>Naviga</h4><div class="footer-links"><a href="index.html">Home</a><a href="immobili.html">Immobili</a><a href="servizi.html">Servizi</a><a href="chi-siamo.html">Chi Siamo</a><a href="contatti.html">Contatti</a></div></div>
+        <div><h4>Zone</h4><div class="footer-links"><a href="immobili.html?zone=Citt%C3%A0%20Alta">Città Alta</a><a href="immobili.html?zone=San%20Vigilio">San Vigilio</a><a href="immobili.html?zone=Colli%20di%20Bergamo">Colli di Bergamo</a><a href="immobili.html?zone=Centro">Centro</a></div></div>
+        <div><h4>Contatti</h4><div class="footer-links"><a data-agency="phone" href="#">+39 035 000 000</a><a data-agency="email" href="#">enrico@rizzetti.it</a><span data-agency="hours" style="color:rgba(246,241,231,0.6);font-size:0.86rem"></span></div></div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Rizzetti Immobiliare — Tutti i diritti riservati</span>
+        <span><a href="privacy.html">Privacy Policy</a> · <a href="cookie.html">Cookie Policy</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/core.js"></script>
+  <script src="assets/js/listings.js"></script>
+  <script src="assets/js/forms.js"></script>
+  <script src="assets/js/chat.js"></script>
+</body>
+</html>

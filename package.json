@@ -1,0 +1,31 @@
+{
+  "name": "rizzetti-immobiliare-agent",
+  "version": "2.0.0",
+  "description": "Rizzetti Immobiliare — Luxury Living Bergamo. Sito web e agente IA per la vendita di proprietà di lusso a Bergamo.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test test/*.test.js",
+    "validate": "node scripts/validate-data.js"
+  },
+  "keywords": [
+    "immobiliare",
+    "luxury",
+    "real-estate",
+    "bergamo",
+    "rizzetti",
+    "ai-agent"
+  ],
+  "author": "Rizzetti Immobiliare — Enrico Rizzetti <enrico@rizzetti.it>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/enricorizz/Repository-name-ppropriet-di-lusso-a-Bergamo.git"
+  }
+}

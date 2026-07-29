@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Loft industriale con grandi vetrate">
+  <defs>
+    <linearGradient id="lf-brick" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7a4d3a"/>
+      <stop offset="1" stop-color="#5e3a2b"/>
+    </linearGradient>
+    <linearGradient id="lf-win" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8ea3a6"/>
+      <stop offset="1" stop-color="#d9b978"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="#efe9dd"/>
+  <!-- brick back wall -->
+  <rect width="720" height="900" fill="url(#lf-brick)"/>
+  <g stroke="#4a2e22" stroke-width="2" opacity="0.5">
+    <line x1="0" y1="90" x2="720" y2="90"/><line x1="0" y1="180" x2="720" y2="180"/>
+    <line x1="0" y1="270" x2="720" y2="270"/><line x1="0" y1="360" x2="720" y2="360"/>
+    <line x1="0" y1="450" x2="720" y2="450"/><line x1="0" y1="540" x2="720" y2="540"/>
+    <line x1="90" y1="0" x2="90" y2="540"/><line x1="270" y1="0" x2="270" y2="540"/>
+    <line x1="450" y1="0" x2="450" y2="540"/><line x1="630" y1="0" x2="630" y2="540"/>
+  </g>
+  <!-- big steel-frame window -->
+  <rect x="740" y="60" width="420" height="600" fill="url(#lf-win)"/>
+  <g stroke="#20201d" stroke-width="8">
+    <rect x="740" y="60" width="420" height="600" fill="none"/>
+    <line x1="880" y1="60" x2="880" y2="660"/>
+    <line x1="1020" y1="60" x2="1020" y2="660"/>
+    <line x1="740" y1="260" x2="1160" y2="260"/>
+    <line x1="740" y1="460" x2="1160" y2="460"/>
+  </g>
+  <!-- floor concrete/resin -->
+  <rect y="660" width="1200" height="240" fill="#3f3b35"/>
+  <rect y="660" width="1200" height="8" fill="#4b463e"/>
+  <!-- exposed ceiling ducts -->
+  <rect y="0" width="1200" height="46" fill="#2c2a26"/>
+  <circle cx="300" cy="23" r="16" fill="#4b463e"/>
+  <circle cx="600" cy="23" r="16" fill="#4b463e"/>
+  <circle cx="900" cy="23" r="16" fill="#4b463e"/>
+  <!-- pendant lights -->
+  <g stroke="#141410" stroke-width="3">
+    <line x1="400" y1="46" x2="400" y2="180"/>
+    <line x1="560" y1="46" x2="560" y2="150"/>
+  </g>
+  <path d="M370 180 h60 l-10 40 h-40 z" fill="#c9a24b"/>
+  <path d="M535 150 h50 l-8 34 h-34 z" fill="#c9a24b"/>
+  <!-- sofa + rug -->
+  <rect x="180" y="700" width="330" height="60" rx="10" fill="#3a5b57"/>
+  <rect x="180" y="670" width="330" height="40" rx="10" fill="#42665f"/>
+  <rect x="150" y="770" width="420" height="90" rx="4" fill="#5a5346" opacity="0.5"/>
+  <!-- plant -->
+  <g fill="#25341f"><ellipse cx="1080" cy="700" rx="46" ry="90"/></g>
+  <rect x="1050" y="740" width="60" height="70" fill="#2c2620"/>
+</svg>

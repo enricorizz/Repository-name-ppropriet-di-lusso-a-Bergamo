@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Facciata di un palazzo d'epoca">
+  <defs>
+    <linearGradient id="pz-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e7dcc6"/>
+      <stop offset="1" stop-color="#cdbd9d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#pz-wall)"/>
+  <!-- cornice -->
+  <rect y="0" width="1200" height="70" fill="#b7a680"/>
+  <rect y="70" width="1200" height="10" fill="#c9a24b"/>
+  <!-- horizontal string courses -->
+  <g fill="#bcab86">
+    <rect y="330" width="1200" height="14"/>
+    <rect y="600" width="1200" height="14"/>
+  </g>
+  <!-- windows grid: 4 columns x 2 floors -->
+  <g>
+    <!-- piano nobile (tall windows with pediments) -->
+    <g fill="#3a3428">
+      <rect x="150" y="150" width="90" height="160" rx="4"/>
+      <rect x="420" y="150" width="90" height="160" rx="4"/>
+      <rect x="690" y="150" width="90" height="160" rx="4"/>
+      <rect x="960" y="150" width="90" height="160" rx="4"/>
+    </g>
+    <g fill="#c9a24b">
+      <rect x="140" y="140" width="110" height="10"/>
+      <rect x="410" y="140" width="110" height="10"/>
+      <rect x="680" y="140" width="110" height="10"/>
+      <rect x="950" y="140" width="110" height="10"/>
+    </g>
+    <!-- balconies -->
+    <g fill="#5a5346">
+      <rect x="130" y="316" width="130" height="10"/>
+      <rect x="400" y="316" width="130" height="10"/>
+      <rect x="670" y="316" width="130" height="10"/>
+      <rect x="940" y="316" width="130" height="10"/>
+    </g>
+    <!-- second floor windows -->
+    <g fill="#3a3428">
+      <rect x="150" y="400" width="90" height="140" rx="4"/>
+      <rect x="420" y="400" width="90" height="140" rx="4"/>
+      <rect x="690" y="400" width="90" height="140" rx="4"/>
+      <rect x="960" y="400" width="90" height="140" rx="4"/>
+    </g>
+    <!-- window glass sheen -->
+    <g fill="#c9a24b" opacity="0.25">
+      <rect x="150" y="150" width="45" height="160"/>
+      <rect x="420" y="150" width="45" height="160"/>
+      <rect x="690" y="150" width="45" height="160"/>
+      <rect x="960" y="150" width="45" height="160"/>
+    </g>
+    <!-- window frames -->
+    <g stroke="#2a251c" stroke-width="3" fill="none">
+      <line x1="195" y1="150" x2="195" y2="310"/>
+      <line x1="465" y1="150" x2="465" y2="310"/>
+      <line x1="735" y1="150" x2="735" y2="310"/>
+      <line x1="1005" y1="150" x2="1005" y2="310"/>
+    </g>
+  </g>
+  <!-- ground floor: rusticated with portal -->
+  <rect y="620" width="1200" height="280" fill="#c3b391"/>
+  <g stroke="#a8956e" stroke-width="3">
+    <line x1="0" y1="680" x2="1200" y2="680"/>
+    <line x1="0" y1="740" x2="1200" y2="740"/>
+    <line x1="0" y1="800" x2="1200" y2="800"/>
+  </g>
+  <!-- grand portal -->
+  <path d="M520 900 L520 720 Q 600 650 680 720 L680 900 Z" fill="#3a2c1c"/>
+  <path d="M520 720 Q 600 650 680 720" fill="none" stroke="#c9a24b" stroke-width="6"/>
+  <circle cx="600" cy="810" r="7" fill="#c9a24b"/>
+</svg>

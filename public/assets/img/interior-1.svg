@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Interno elegante di rappresentanza">
+  <defs>
+    <linearGradient id="in-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#efe9dd"/>
+      <stop offset="1" stop-color="#ddd3c0"/>
+    </linearGradient>
+    <linearGradient id="in-floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a67c4e"/>
+      <stop offset="1" stop-color="#875f38"/>
+    </linearGradient>
+    <linearGradient id="in-win" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cfe0d8"/>
+      <stop offset="1" stop-color="#e8cf9a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#in-wall)"/>
+  <!-- floor -->
+  <rect y="640" width="1200" height="260" fill="url(#in-floor)"/>
+  <g stroke="#6f4c2a" stroke-width="2" opacity="0.5">
+    <line x1="120" y1="640" x2="40" y2="900"/>
+    <line x1="360" y1="640" x2="330" y2="900"/>
+    <line x1="600" y1="640" x2="600" y2="900"/>
+    <line x1="840" y1="640" x2="870" y2="900"/>
+    <line x1="1080" y1="640" x2="1160" y2="900"/>
+  </g>
+  <!-- large window with light -->
+  <rect x="760" y="120" width="360" height="460" fill="url(#in-win)"/>
+  <rect x="760" y="120" width="360" height="460" fill="none" stroke="#2c2a26" stroke-width="10"/>
+  <line x1="940" y1="120" x2="940" y2="580" stroke="#2c2a26" stroke-width="8"/>
+  <line x1="760" y1="350" x2="1120" y2="350" stroke="#2c2a26" stroke-width="8"/>
+  <!-- floor-length curtain -->
+  <rect x="700" y="110" width="60" height="530" fill="#c7b48c" opacity="0.85"/>
+  <!-- sofa -->
+  <g>
+    <rect x="120" y="560" width="380" height="120" rx="16" fill="#7d7161"/>
+    <rect x="120" y="520" width="380" height="70" rx="16" fill="#8b7f6d"/>
+    <rect x="150" y="540" width="90" height="60" rx="10" fill="#c9a24b" opacity="0.8"/>
+    <rect x="380" y="540" width="90" height="60" rx="10" fill="#b98f45" opacity="0.8"/>
+  </g>
+  <!-- coffee table -->
+  <rect x="230" y="700" width="200" height="20" rx="6" fill="#2c2620"/>
+  <rect x="250" y="720" width="14" height="60" fill="#2c2620"/>
+  <rect x="396" y="720" width="14" height="60" fill="#2c2620"/>
+  <!-- floor lamp -->
+  <rect x="600" y="360" width="8" height="300" fill="#2c2620"/>
+  <path d="M576 360 L632 360 L620 320 L588 320 Z" fill="#c9a24b" opacity="0.85"/>
+  <!-- art frame -->
+  <rect x="180" y="300" width="180" height="160" fill="#efe9dd" stroke="#c9a24b" stroke-width="6"/>
+  <path d="M180 460 L250 360 L300 410 L360 330 L360 460 Z" fill="#8a6b4a" opacity="0.6"/>
+  <!-- chandelier -->
+  <rect x="470" y="120" width="4" height="60" fill="#2c2620"/>
+  <circle cx="472" cy="190" r="26" fill="none" stroke="#c9a24b" stroke-width="4"/>
+  <g fill="#f4e6b8"><circle cx="450" cy="200" r="6"/><circle cx="494" cy="200" r="6"/><circle cx="472" cy="214" r="6"/></g>
+</svg>

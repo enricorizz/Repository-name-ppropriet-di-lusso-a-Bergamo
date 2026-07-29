@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Emblema Rizzetti Immobiliare">
+  <defs>
+    <linearGradient id="lm-gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e3c67e"/>
+      <stop offset="1" stop-color="#b8863c"/>
+    </linearGradient>
+  </defs>
+  <circle cx="50" cy="50" r="47" fill="none" stroke="url(#lm-gold)" stroke-width="2"/>
+  <circle cx="50" cy="50" r="41" fill="none" stroke="url(#lm-gold)" stroke-width="0.8" opacity="0.6"/>
+  <!-- stylised R -->
+  <path d="M38 28 h16 a12 12 0 0 1 0 24 h-6 l12 20 h-9 l-11 -19 v19 h-8 V28 Z M42 35 v12 h9 a6 6 0 0 0 0 -12 Z"
+        fill="url(#lm-gold)"/>
+</svg>

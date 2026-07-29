@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Rizzetti">
+  <rect width="64" height="64" rx="12" fill="#141410"/>
+  <path d="M22 16 h11 a9 9 0 0 1 0 18 h-4 l9 14 h-7 l-8 -13 v13 h-6 V16 Z M25 21 v9 h6 a4.5 4.5 0 0 0 0 -9 Z"
+        fill="#c9a24b"/>
+</svg>

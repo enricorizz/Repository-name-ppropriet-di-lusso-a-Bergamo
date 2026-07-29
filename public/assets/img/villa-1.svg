@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Villa contemporanea al tramonto">
+  <defs>
+    <linearGradient id="v1-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#243040"/>
+      <stop offset="1" stop-color="#6b5545"/>
+    </linearGradient>
+    <linearGradient id="v1-glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4e6b8"/>
+      <stop offset="1" stop-color="#c99b52"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#v1-sky)"/>
+  <circle cx="960" cy="250" r="90" fill="#f6d79a" opacity="0.5"/>
+  <!-- lawn -->
+  <rect y="640" width="1200" height="260" fill="#1c2a1e"/>
+  <rect y="640" width="1200" height="30" fill="#25361f" opacity="0.7"/>
+  <!-- pool reflection -->
+  <rect x="120" y="720" width="520" height="120" rx="6" fill="#2f4a52"/>
+  <rect x="120" y="720" width="520" height="120" rx="6" fill="#3a6470" opacity="0.5"/>
+  <!-- house body -->
+  <g>
+    <rect x="540" y="380" width="520" height="270" fill="#efe9dd"/>
+    <rect x="540" y="360" width="520" height="26" fill="#d9d2c4"/>
+    <!-- upper cantilever -->
+    <rect x="500" y="300" width="360" height="90" fill="#2b2b28"/>
+    <!-- glass wall -->
+    <rect x="560" y="400" width="300" height="230" fill="url(#v1-glass)" opacity="0.9"/>
+    <g stroke="#2b2b28" stroke-width="4">
+      <line x1="635" y1="400" x2="635" y2="630"/>
+      <line x1="710" y1="400" x2="710" y2="630"/>
+      <line x1="785" y1="400" x2="785" y2="630"/>
+      <line x1="560" y1="515" x2="860" y2="515"/>
+    </g>
+    <!-- side wall stone -->
+    <rect x="880" y="400" width="180" height="250" fill="#d8cdb6"/>
+    <g fill="#c9a24b" opacity="0.8">
+      <rect x="905" y="440" width="130" height="18"/>
+      <rect x="905" y="500" width="130" height="18"/>
+      <rect x="905" y="560" width="130" height="18"/>
+    </g>
+  </g>
+  <!-- slim trees -->
+  <g fill="#182417">
+    <rect x="200" y="470" width="10" height="180"/>
+    <ellipse cx="205" cy="470" rx="42" ry="120"/>
+    <rect x="300" y="500" width="9" height="150"/>
+    <ellipse cx="304" cy="500" rx="34" ry="100"/>
+  </g>
+</svg>

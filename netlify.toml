@@ -1,0 +1,18 @@
+# Netlify deploy configuration
+# Static hosting of /public. The API (/api/*) requires a Node host
+# (see server.js) or can be adapted to Netlify Functions.
+
+[build]
+  publish = "public"
+  command = "echo 'Sito statico — nessuna build necessaria'"
+
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Piscina a sfioro con vista panoramica">
+  <defs>
+    <linearGradient id="pl-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a536b"/>
+      <stop offset="0.55" stop-color="#9aa39a"/>
+      <stop offset="1" stop-color="#e6c98f"/>
+    </linearGradient>
+    <linearGradient id="pl-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4f8f9c"/>
+      <stop offset="1" stop-color="#2b5f6b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#pl-sky)"/>
+  <circle cx="300" cy="230" r="70" fill="#f6d79a" opacity="0.45"/>
+  <!-- distant hills -->
+  <path d="M0 430 Q 300 380 600 410 T 1200 400 V520 H0 Z" fill="#5b6b6a" opacity="0.6"/>
+  <path d="M0 480 Q 350 440 700 470 T 1200 470 V560 H0 Z" fill="#3f5150" opacity="0.7"/>
+  <!-- pool deck -->
+  <rect y="520" width="1200" height="380" fill="#d8ccb4"/>
+  <!-- infinity pool -->
+  <rect y="520" width="1200" height="250" fill="url(#pl-water)"/>
+  <rect y="520" width="1200" height="10" fill="#bfe0dc" opacity="0.6"/>
+  <!-- ripples -->
+  <g stroke="#bfe0dc" stroke-width="3" opacity="0.4" fill="none">
+    <path d="M60 580 q 60 -14 120 0 t 120 0"/>
+    <path d="M400 620 q 70 -14 140 0 t 140 0"/>
+    <path d="M760 600 q 60 -12 120 0 t 120 0"/>
+    <path d="M120 700 q 80 -14 160 0 t 160 0"/>
+  </g>
+  <!-- sun loungers -->
+  <g fill="#f4efe4">
+    <rect x="140" y="800" width="150" height="26" rx="8"/>
+    <rect x="140" y="782" width="60" height="26" rx="8"/>
+    <rect x="330" y="800" width="150" height="26" rx="8"/>
+    <rect x="330" y="782" width="60" height="26" rx="8"/>
+  </g>
+  <!-- parasol -->
+  <rect x="560" y="740" width="8" height="120" fill="#2c2620"/>
+  <path d="M480 740 Q 564 690 648 740 Z" fill="#c9a24b"/>
+  <!-- palm -->
+  <g fill="#1c2a1a">
+    <rect x="1050" y="560" width="12" height="200"/>
+    <path d="M1056 560 q -80 -30 -120 -70 q 60 10 120 40 z"/>
+    <path d="M1056 560 q 80 -30 120 -70 q -60 10 -120 40 z"/>
+    <path d="M1056 560 q -30 -70 -20 -120 q 20 40 20 100 z"/>
+    <path d="M1056 560 q 30 -70 20 -120 q -20 40 -20 100 z"/>
+  </g>
+</svg>
